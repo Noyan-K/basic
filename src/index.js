@@ -5,7 +5,7 @@ import { DatabaseService } from './services/database.service.js';
 import { EmailService } from './services/email.service.js';
 import { RepositoryService } from './services/repository.service.js';
 import { UserService } from './services/user.service.js';
-import { PutUsersController } from './controllers/put-users.controller.js';
+import { PostUsersController } from './controllers/post-users.controller.js';
 
 const pool = mysql.createPool({
   host: process.env.MYSQL_HOST || 'localhost',
@@ -39,7 +39,7 @@ app.use(async (ctx, next) => {
 
   return next();
 });
-app.use(PutUsersController);
+app.use(PostUsersController);
 
 export const httpServer = app.listen(process.env.PORT || '4000');
 httpServer.on('close', async () => {

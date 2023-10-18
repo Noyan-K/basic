@@ -7,12 +7,12 @@ afterAll(async () => {
 
 // Интеграционные тесты
 describe('Routes', () => {
-  describe('PUT /users', () => {
+  describe('POST /users', () => {
     const test = {};
 
     beforeAll(async () => {
       test.response = await request(httpServer)
-        .put('/users')
+        .post('/users')
         .send({
           users: [{
             nickname: 'SomeUser1',

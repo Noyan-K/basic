@@ -12,10 +12,10 @@
  * @returns {Promise<void>}
  * @constructor
  */
-export const PutUsersController = async (ctx) => {
+export const PostUsersController = async (ctx) => {
   const { method, path } = ctx;
   const { users } = ctx.request.body;
-  if (!/^PUT \/users$/.test(`${method} ${path}`)) {
+  if (!/^POST \/users$/.test(`${method} ${path}`)) {
     return;
   }
 
