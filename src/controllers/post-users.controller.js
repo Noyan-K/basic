@@ -15,7 +15,7 @@
 export const PostUsersController = async (ctx) => {
   const { method, path } = ctx;
   const { users } = ctx.request.body;
-  if (!/^POST \/users$/.test(`${method} ${path}`)) {
+  if (method !== 'POST' || path !== '/users') {
     return;
   }
 
