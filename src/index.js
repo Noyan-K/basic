@@ -1,11 +1,11 @@
 import mysql from 'mysql2/promise';
 import Koa from 'koa';
 import bodyParser from 'koa-bodyparser';
-import { DatabaseService } from './services/database.service';
-import { EmailService } from './services/email.service';
-import { RepositoryService } from './services/repository.service';
-import { UserService } from './services/user.service';
-import { PutUsersController } from './controllers/put-users.controller';
+import { DatabaseService } from './services/database.service.js';
+import { EmailService } from './services/email.service.js';
+import { RepositoryService } from './services/repository.service.js';
+import { UserService } from './services/user.service.js';
+import { PutUsersController } from './controllers/put-users.controller.js';
 
 const pool = mysql.createPool({
   host: process.env.MYSQL_HOST || 'localhost',

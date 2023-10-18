@@ -1,4 +1,4 @@
-import { BaseRepo } from './base.repo';
+import { BaseRepo } from './base.repo.js';
 
 export class BaseListRepo extends BaseRepo {
   /**

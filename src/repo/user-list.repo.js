@@ -1,4 +1,4 @@
-import { BaseListRepo } from './base-list.repo';
+import { BaseListRepo } from './base-list.repo.js';
 
 export class UserListRepo extends BaseListRepo {
   static name = 'userList';

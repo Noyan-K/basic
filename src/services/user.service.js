@@ -1,4 +1,4 @@
-import { UserListRepo } from '../repo/user-list.repo';
+import { UserListRepo } from '../repo/user-list.repo.js';
 
 export class UserService {
   /**
